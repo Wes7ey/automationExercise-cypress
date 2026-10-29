@@ -1,0 +1,26 @@
+{
+  "name": "cypress-automationexercise",
+  "version": "1.0.0",
+  "description": "Testes E2E de automationexercise.com com Cypress (casos 1, 2, 3, 4, 5, 8, 9, 10, 15 e 16)",
+  "private": true,
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress run",
+    "test:auth": "cypress run --spec \"cypress/e2e/auth/**/*.cy.js\"",
+    "test:products": "cypress run --spec \"cypress/e2e/products/**/*.cy.js\"",
+    "test:home": "cypress run --spec \"cypress/e2e/home/**/*.cy.js\"",
+    "test:checkout": "cypress run --spec \"cypress/e2e/checkout/**/*.cy.js\""
+  },
+  "keywords": [
+    "cypress",
+    "e2e",
+    "qa"
+  ],
+  "type": "commonjs",
+  "devDependencies": {
+    "cypress": "^16.2.0",
+    "cypress-mochawesome-reporter": "^5.0.0",
+    "cypress-real-events": "^1.15.1"
+  }
+}

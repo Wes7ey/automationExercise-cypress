@@ -1,0 +1,91 @@
+// Seletores centralizados. Prefira data-qa quando o site oferecer.
+// Se algum seletor mudar, ajuste somente aqui.
+module.exports = {
+  nav: {
+    home: 'a[href="/"]',
+    signupLogin: 'a[href="/login"]',
+    logout: 'a[href="/logout"]',
+    deleteAccount: 'a[href="/delete_account"]',
+    products: 'a[href="/products"]',
+    // Escopado ao menu do header: sem escopo há 2 matches (header + modal do carrinho)
+    cart: '.shop-menu a[href="/view_cart"]',
+    loggedInAs: 'li:contains("Logged in as")',
+  },
+
+  login: {
+    form: 'div.login-form',
+    email: '[data-qa="login-email"]',
+    password: '[data-qa="login-password"]',
+    button: '[data-qa="login-button"]',
+    errorMessage: 'form p',
+  },
+
+  signup: {
+    form: 'div.signup-form',
+    name: '[data-qa="signup-name"]',
+    email: '[data-qa="signup-email"]',
+    button: '[data-qa="signup-button"]',
+    errorMessage: 'form p',
+  },
+
+  accountInfo: {
+    title: (value) => `#id_gender${value}`,
+    password: '[data-qa="password"]',
+    days: '[data-qa="days"]',
+    months: '[data-qa="months"]',
+    years: '[data-qa="years"]',
+    newsletter: '#newsletter',
+    partnerOffers: '#optin',
+    firstName: '[data-qa="first_name"]',
+    lastName: '[data-qa="last_name"]',
+    company: '[data-qa="company"]',
+    address: '[data-qa="address"]',
+    country: '[data-qa="country"]',
+    state: '[data-qa="state"]',
+    city: '[data-qa="city"]',
+    zipcode: '[data-qa="zipcode"]',
+    mobile: '[data-qa="mobile_number"]',
+    createAccount: '[data-qa="create-account"]',
+  },
+
+  accountResult: {
+    created: '[data-qa="account-created"]',
+    deleted: '[data-qa="account-deleted"]',
+    continue: '[data-qa="continue-button"]',
+  },
+
+  home: {
+    logo: 'img[alt="Website for automation practice"]',
+    subscriptionTitle: 'h2',
+    subscriptionEmail: '#susbscribe_email',
+    subscriptionButton: '#subscribe',
+    subscriptionSuccess: '#success-subscribe',
+  },
+
+  products: {
+    title: '.title.text-center',
+    productCard: '.features_items .product-image-wrapper',
+    productName: '.productinfo p',
+    addToCart: '.productinfo .add-to-cart',
+    viewProductLink: 'a[href^="/product_details/"]',
+    detailName: '.product-information h2',
+    detailInfo: '.product-information p',
+    searchInput: '#search_product',
+    searchButton: '#submit_search',
+    continueShopping: 'button.close-modal',
+  },
+
+  cart: {
+    proceedToCheckout: '.btn.btn-default.check_out',
+    addressDetails: '#address_delivery',
+    commentBox: 'textarea[name="message"]',
+    placeOrder: 'a[href="/payment"]',
+    nameOnCard: '[data-qa="name-on-card"]',
+    cardNumber: '[data-qa="card-number"]',
+    cvc: '[data-qa="cvc"]',
+    expiryMonth: '[data-qa="expiry-month"]',
+    expiryYear: '[data-qa="expiry-year"]',
+    payAndConfirm: '[data-qa="pay-button"]',
+    orderPlaced: '[data-qa="order-placed"]',
+  },
+};
