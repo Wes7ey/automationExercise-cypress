@@ -2,7 +2,6 @@ const selectors = require('../selectors');
 
 class ProductsPage {
   shouldBeVisible() {
-    // O texto no DOM é "All Products"; o CSS aplica uppercase visualmente
     cy.contains(selectors.products.title, 'All Products').should('be.visible');
     cy.get(selectors.products.productCard).should('have.length.greaterThan', 0);
   }

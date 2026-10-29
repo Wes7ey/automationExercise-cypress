@@ -22,7 +22,6 @@ class HomePage {
   }
 
   scrollToSubscription() {
-    // O texto no DOM é "Subscription"; o CSS aplica uppercase visualmente
     cy.contains(selectors.home.subscriptionTitle, 'Subscription')
       .scrollIntoView()
       .should('be.visible');

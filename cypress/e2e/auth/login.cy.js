@@ -36,7 +36,6 @@ describe('Login e logout', () => {
     cy.logoutUser();
     cy.get(selectors.login.form).should('be.visible');
 
-    // Limpeza
     cy.loginUser(user.email, user.password);
     cy.deleteAccount();
   });

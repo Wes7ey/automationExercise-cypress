@@ -5,7 +5,6 @@ const selectors = require('../../support/selectors');
 const { buildUser } = require('../../support/utils/testData');
 const payment = require('../../fixtures/payment.json');
 
-// Fluxo compartilhado: adiciona produto, vai ao carrinho e finaliza o pedido
 const placeOrder = () => {
   ProductsPage.addFirstProductToCart();
   HomePage.goToCart();

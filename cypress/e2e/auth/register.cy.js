@@ -21,7 +21,6 @@ describe('Cadastro de usuário', () => {
     SignupPage.startSignup(user.name, user.email);
     SignupPage.shouldShowExistingEmailError();
 
-    // Limpeza: a conta existe, então loga e exclui
     cy.loginUser(user.email, user.password);
     cy.deleteAccount();
   });

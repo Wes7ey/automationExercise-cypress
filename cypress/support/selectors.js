@@ -1,5 +1,3 @@
-// Seletores centralizados. Prefira data-qa quando o site oferecer.
-// Se algum seletor mudar, ajuste somente aqui.
 module.exports = {
   nav: {
     home: 'a[href="/"]',
@@ -7,7 +5,6 @@ module.exports = {
     logout: 'a[href="/logout"]',
     deleteAccount: 'a[href="/delete_account"]',
     products: 'a[href="/products"]',
-    // Escopado ao menu do header: sem escopo há 2 matches (header + modal do carrinho)
     cart: '.shop-menu a[href="/view_cart"]',
     loggedInAs: 'li:contains("Logged in as")',
   },
