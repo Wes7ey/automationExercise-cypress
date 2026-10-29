@@ -21,9 +21,14 @@ class ProductsPage {
   }
 
   addFirstProductToCart() {
-  cy.get('.product-overlay').first().invoke('attr', 'style', 'display:block !important; opacity:1 !important; visibility:visible !important; height:100% !important;').find('.add-to-cart').first().click();
-  
-  cy.get(selectors.products.continueShopping).click();
+    cy.get(selectors.products.productOverlay)
+      .first()
+      .invoke('attr', 'style', 'display:block !important; opacity:1 !important; visibility:visible !important; height:100% !important;')
+      .find(selectors.products.overlayAddToCart)
+      .first()
+      .click();
+
+    cy.get(selectors.products.continueShopping).click();
   }
 }
 

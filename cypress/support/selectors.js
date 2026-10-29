@@ -64,6 +64,8 @@ module.exports = {
     productCard: '.features_items .product-image-wrapper',
     productName: '.productinfo p',
     addToCart: '.productinfo .add-to-cart',
+    productOverlay: '.product-overlay',
+    overlayAddToCart: '.add-to-cart',
     viewProductLink: 'a[href^="/product_details/"]',
     detailName: '.product-information h2',
     detailInfo: '.product-information p',
